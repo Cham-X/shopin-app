@@ -4,20 +4,22 @@
   height: 1.5rem;
 }
 .logo {
-  height: 40px;
+  height: 30px;
 }
 .navbar {
   max-width: 1170px;
+  width: 90vw;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 1rem;
 }
 .links {
+  display: none;
+}
+.header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
 }
 .links li {
   margin: 0.5rem 1rem;
@@ -25,4 +27,27 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+.toggleBtn:hover {
+  background: #6c7ae0;
+}
+
+@media screen and (min-width: 800px) {
+  .navbar {
+    max-width: 1170px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .toggleBtn {
+    display: none;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

@@ -1,0 +1,58 @@
+.sidebarWrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}
+.sidebar {
+  background: #fff;
+  width: 100%;
+  max-width: 1170px;
+  padding: 1rem 2.5rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.sidebarWrapper{
+  display: none;
+}
+.show{
+  display: block;
+  position: fixed;
+  z-index: 2;
+   background: rgba(0, 0, 0, 0.5);
+}
+.logo {
+  height: 30px;
+}
+.closeNav {
+  background: transparent;
+  color: red;
+}
+.linkList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.links li {
+  margin: 0.5rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.search,
+.cart {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.toggleBtn:hover {
+  background: #6c7ae0;
+}
