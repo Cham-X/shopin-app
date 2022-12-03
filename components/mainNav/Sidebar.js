@@ -10,7 +10,8 @@ import { useGlobalContext } from '../../Contexts/globalContext'
 const Sidebar = () => {
   const {isSidebarOpen,closeSidebar} = useGlobalContext()
   return (
-    <aside className={isSidebarOpen ? Style.sidebarWrapper.show : Style.sidebarWrapper}>
+    <aside className={`${isSidebarOpen ? Style.sidebarWrapper.show  : Style.sidebarWrapper}`}>
+      <div className={Style.overlay}></div>
       <div className={Style.sidebar}>
         <div className={Style.header}>
           <Image src={Logo} alt="logo" className={Style.logo} />
@@ -21,6 +22,9 @@ const Sidebar = () => {
         <div className={Style.linkList}>
           <ul className={Style.links}>
             <li>
+              <Link href="/">home</Link>
+            </li>
+            <li>
               <Link href="/shop">shop</Link>
             </li>
             <li>
@@ -30,7 +34,7 @@ const Sidebar = () => {
               <Link href="/contact">contact</Link>
             </li>
           </ul>
-          <ul className={Style.links}>
+          <ul className={Style.iconLink}>
             <li>
               Cart
               <Image src={Cart} alt="cart" className={Style.cart} />

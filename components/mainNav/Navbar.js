@@ -20,6 +20,9 @@ const Navbar = () => {
         </div>
         <ul className={Style.links}>
           <li>
+            <Link href="/">home</Link>
+          </li>
+          <li>
             <Link href="/shop">shop</Link>
           </li>
           <li>

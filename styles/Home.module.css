@@ -1,31 +1,56 @@
-/* .container {
+.container {
   padding: 0 2rem;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.heroInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.heroHeader,
+.blueInfo {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
 }
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.heroImg {
+  align-self: flex-end;
+}
+.heroImage {
+  width: 35vw;
+  height: 90vh;
+}
+.blueInfo {
+  color: #6c7ae0;
+  letter-spacing: 0.2rem;
+}
+.btn{
+  background-color: #6c7ae0;
+}
+.btn a{
+  color: #ffff;
+  font-weight: 500;
+}
+@media screen and (max-width: 800px) {
+  .hero{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+  }
+.heroImg{
+  display: none;
+}
 }
 
 .title a {
@@ -61,8 +86,7 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -126,4 +150,4 @@
   .logo img {
     filter: invert(1);
   }
-} */
+}
