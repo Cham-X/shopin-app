@@ -26,33 +26,39 @@
   align-self: flex-end;
 }
 .heroImage {
-  width: 35vw;
+  width: 85%;
   height: 90vh;
 }
 .blueInfo {
   color: #6c7ae0;
   letter-spacing: 0.2rem;
 }
-.btn{
+.btn {
   background-color: #6c7ae0;
+   padding: 0.5rem 2rem;
 }
-.btn a{
+.btn a {
   color: #ffff;
   font-weight: 500;
 }
 @media screen and (max-width: 800px) {
-  .hero{
+  .hero {
     display: flex;
     justify-items: center;
     align-items: center;
     width: 95%;
     height: 100%;
   }
-.heroImg{
-  display: none;
+  .heroImg {
+    display: none;
+  }
 }
+@media screen and (max-width: 500px) {
+  .heroHeader,
+  .blueInfo {
+    font-size: 30px;
+  }
 }
-
 .title a {
   color: #0070f3;
   text-decoration: none;
