@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import Style from "./Navbar.module.css";
 import { FaBars } from "react-icons/fa";
-import Logo from "../images/Shopin.png";
-import Cart from "../images/Vector.png";
-import Search from "../images/Vector (2).png";
+import Logo from "/images/Shopin.png";
+import Cart from "/images/Vector.png";
+import Search from "/images/Vector (2).png";
 import { useGlobalContext } from "../../Contexts/globalContext";
 
 const Navbar = () => {

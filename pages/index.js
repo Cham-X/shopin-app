@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import HeroImage from "../components/images/jon-ly-Xn7GvimQrk8-unsplash (1) 1.svg";
+import HeroImage from "../images/jon-ly-Xn7GvimQrk8-unsplash (1) 1.svg";
 import Image from "next/image";
 import Link from "next/link";
 
