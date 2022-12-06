@@ -11,7 +11,7 @@ const Sidebar = () => {
   const {isSidebarOpen,closeSidebar} = useGlobalContext()
   return (
     <aside className={`${isSidebarOpen ? Style.sidebarWrapper.show  : Style.sidebarWrapper}`}>
-      <div className={Style.overlay}></div>
+      <div className={Style.overlay} onMouseEnter={closeSidebar} onMouseLeave={closeSidebar}></div>
       <div className={Style.sidebar}>
         <div className={Style.header}>
           <Image src={Logo} alt="logo" className={Style.logo} />

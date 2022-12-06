@@ -6,13 +6,11 @@ export const AppProvider = ({children}) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   const openSidebar = () => {
-    setIsSidebarOpen(true)
-    console.log('sidebar opened')
+    setIsSidebarOpen(!isSidebarOpen)
   }
 
   const closeSidebar = () => {
-    setIsSidebarOpen(false)
-    console.log('closenav')
+    setIsSidebarOpen(!isSidebarOpen)
   }
 
 return <AppContext.Provider value={{isSidebarOpen,openSidebar,closeSidebar}}>{children}</AppContext.Provider>

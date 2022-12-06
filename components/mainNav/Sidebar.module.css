@@ -6,11 +6,6 @@
   height: 100%;
   transform: translate(-100%);
   transition: all 0.3s linear;
-  background: rgba(0, 0, 0, 0.5);
-}
-.show {
-  transform: translate(-90);
-  transition: all 0.3s linear;
 }
 .overlay {
   background: rgba(0, 0, 0, 0.5);
@@ -28,8 +23,6 @@
   width: 100%;
   padding: 1rem 2rem;
   z-index: 2;
-  transform: translate(0);
-  transition: all 0.3s linear;
 }
 .header {
   display: flex;

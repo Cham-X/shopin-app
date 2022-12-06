@@ -173,7 +173,7 @@ section {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
-  height: 100vh;
+  min-height: 100vh;
 }
 main {
   width: 90vw;

@@ -1,0 +1,23 @@
+.container{
+  background: #fff;
+  align-content: center;
+  justify-content: center;
+}
+.ourProduct{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.sectionHeader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.underline{
+  height: 2px;
+  width: 9.5rem;
+  background: #6c7ae0;
+}

@@ -1,5 +1,5 @@
 import styles from "/styles/About.module.css";
-import Overview from "/images/jon-ly-Xn7GvimQrk8-unsplash (1) 1.svg";
+import Overview from "/images/freestocks-_3Q3tsJ01nc-unsplash.jpg";
 import Image from "next/image";
 
 const AboutPage = () => {
@@ -17,7 +17,7 @@ const AboutPage = () => {
         </article>
         <article className={styles.aboutContent}>
           <div className={styles.contentHeader}>
-            <h4>About Us</h4>
+            <h4>Our Story</h4>
             <div className={styles.underline}></div>
           </div>
           <div>
