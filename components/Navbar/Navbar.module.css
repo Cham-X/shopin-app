@@ -37,6 +37,19 @@
 .toggleBtn:hover {
   color: #000;
 }
+.cartContainer{
+  position: relative;
+}
+.count{
+  background: #6c7ae0;
+  color: #fff;
+  border-radius: 50%;
+  padding: 3px 7px;
+  position: absolute;
+  display: inline-block;
+  top: -1rem;
+  right: -1.5rem;
+}
 
 @media screen and (min-width: 800px) {
   .navbar {

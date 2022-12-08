@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "./Footer";
-import Navbar from "./mainNav/Navbar";
-import Sidebar from "./mainNav/Sidebar";
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
+import Sidebar from "../Sidebar/Sidebar";
 
 const Layout = ({ children }) => {
   return (

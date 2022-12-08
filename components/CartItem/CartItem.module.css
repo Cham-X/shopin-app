@@ -1,0 +1,26 @@
+.item {
+  width: 15rem;
+  height: 5rem;
+}
+.imageContainer {
+  align-self: center;
+}
+
+.itemImage {
+  width: 100%;
+  height: 17rem;
+}
+.itemDetails {
+  padding: 0.3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.itemName {
+  color: #000;
+  font-size: 1.2rem;
+}
+.itemPrice {
+  color: #6c7ae0;
+  font-size: 1.2rem;
+}

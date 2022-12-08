@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../components/Layout/Layout";
 import { AppProvider } from "../Contexts/globalContext";
 import "../styles/globals.css";
 

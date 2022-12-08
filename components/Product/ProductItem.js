@@ -1,4 +1,7 @@
-import styles from "./Product.module.css";
+import styles from "./ProductItem.module.css";
+
+import data from "/data/shoppingData";
+import CartItemList from "../ItemList/CartItemList";
 
 const Product = () => {
   return (
@@ -9,7 +12,11 @@ const Product = () => {
           <div className={styles.underline}></div>
         </div>
         <div className={styles.products}>
-          <h2>content</h2>
+          <div>
+            <ul>
+              <CartItemList />
+            </ul>
+          </div>
         </div>
       </div>
     </section>

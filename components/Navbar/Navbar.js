@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Style from "./Navbar.module.css";
+import styles from "./Navbar.module.css";
 import { FaBars } from "react-icons/fa";
 import Logo from "/images/Shopin.png";
 import Cart from "/images/Vector.png";
@@ -10,15 +10,15 @@ import { useGlobalContext } from "../../Contexts/globalContext";
 const Navbar = () => {
   const { openSidebar } = useGlobalContext();
   return (
-    <nav className={Style.nav}>
-      <div className={Style.navbar}>
-        <div className={Style.header}>
-          <Image src={Logo} alt="logo" className={Style.logo} />
-          <button className={Style.toggleBtn} onClick={openSidebar}>
+    <nav className={styles.nav}>
+      <div className={styles.navbar}>
+        <div className={styles.header}>
+          <Image src={Logo} alt="logo" className={styles.logo} />
+          <button className={styles.toggleBtn} onClick={openSidebar}>
             <FaBars />
           </button>
         </div>
-        <ul className={Style.links}>
+        <ul className={styles.links}>
           <li>
             <Link href="/">home</Link>
           </li>
@@ -32,14 +32,17 @@ const Navbar = () => {
             <Link href="/contact">contact</Link>
           </li>
         </ul>
-        <ul className={Style.links}>
+        <ul className={styles.links}>
           <li>
             Cart
-            <Image src={Cart} alt="cart" className={Style.cart} />
+            <div className={styles.cartContainer}>
+              <Image src={Cart} alt="cart" className={styles.cart} />
+              <div className={styles.count}>75</div>
+            </div>
           </li>
           <li>
             Login
-            <Image src={Search} alt="search" className={Style.search} />
+            <Image src={Search} alt="search" className={styles.search} />
           </li>
         </ul>
       </div>
