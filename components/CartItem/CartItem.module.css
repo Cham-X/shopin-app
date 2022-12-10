@@ -1,6 +1,6 @@
 .item {
-  width: 20rem;
-  height: 17rem;
+  width: 23rem;
+  height: 20rem;
   margin: 1rem;
 }
 .imageContainer {
@@ -12,23 +12,26 @@
   height: 15rem;
 }
 .itemDetails {
-  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .itemName {
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: capitalize;
 }
 .itemPrice {
   color: #6c7ae0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-@media screen and (max-width:8--px) {
+@media screen and (max-width:800px) {
   .item{
-    width: 90vw;
+    width: 80vw;
   }
+  .itemImage {
+  width: 100%;
+  height: 18rem;
+}
 }

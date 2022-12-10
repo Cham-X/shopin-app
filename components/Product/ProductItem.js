@@ -2,6 +2,7 @@ import styles from "./ProductItem.module.css";
 
 import data from "/data/shoppingData";
 import CartItemList from "../ItemList/CartItemList";
+import Button from "../Button/Button";
 
 const Product = () => {
   return (
@@ -18,6 +19,7 @@ const Product = () => {
             </ul>
           </div>
         </div>
+        <Button href={"shop"} page={"all products"}/>
       </div>
     </section>
   );

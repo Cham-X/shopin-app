@@ -29,14 +29,7 @@
   color: #6c7ae0;
   letter-spacing: 0.2rem;
 }
-.btn {
-  background-color: #6c7ae0;
-   padding: 0.5rem 2rem;
-}
-.btn a {
-  color: #ffff;
-  font-weight: 500;
-}
+
 @media screen and (max-width: 800px) {
   .hero {
     display: flex;
