@@ -1,10 +1,10 @@
 import styles from "./ProductItem.module.css";
-
-import data from "/data/shoppingData";
-import CartItemList from "../ItemList/CartItemList";
+import ItemList from "../ItemList/ItemList";
 import Button from "../Button/Button";
+import { useGlobalContext } from "../../Contexts/globalContext";
 
 const Product = () => {
+  const {categories} = useGlobalContext()
   return (
     <section className={styles.container}>
       <div className={styles.ourProduct}>
@@ -15,7 +15,7 @@ const Product = () => {
         <div className={styles.products}>
           <div>
             <ul>
-              <CartItemList />
+              <ItemList data={categories}/>
             </ul>
           </div>
         </div>

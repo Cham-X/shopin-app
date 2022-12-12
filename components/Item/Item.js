@@ -1,9 +1,8 @@
 import Card from "../Card/Card";
-import styles from "./CartItem.module.css";
+import styles from "./Item.module.css";
 import Image from "next/image";
-import Search from "/images/Vector (2).png"
 
-function CartItem(props) {
+function Item(props) {
   return (
     <li className={styles.item}>
       <Card>
@@ -16,12 +15,12 @@ function CartItem(props) {
         </div>
       </Card>
       <div className={styles.overlay}>
-        <div>
-          <Image src={Search} alt="search"/>
+        <div className={styles.middle}>
+          <Image src="/images/Vector (2).png" alt="search" width="1000" height="1000" className={styles.searchIcon}/>
         </div>
       </div>
     </li>
   );
 }
 
-export default CartItem;
+export default Item;
