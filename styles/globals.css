@@ -73,6 +73,8 @@ a {
   color: #000;
   text-decoration: none;
   text-transform: capitalize;
+  display: flex;
+  gap: 0.5rem;
   transition: var(--transition);
 }
 a:hover {

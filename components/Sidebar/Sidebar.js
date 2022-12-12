@@ -4,44 +4,48 @@ import {FaTimes} from "react-icons/fa"
 import Logo from "/images/Shopin.png";
 import Cart from "/images/Vector.png";
 import Search from "/images/Vector (2).png";
-import Style from './Sidebar.module.css'
+import styles from './Sidebar.module.css'
 import { useGlobalContext } from '../../Contexts/globalContext'
 
 const Sidebar = () => {
   const {isSidebarOpen,closeSidebar} = useGlobalContext()
   return (
-    <aside className={`${isSidebarOpen ? Style.sidebarWrapper.show  : Style.sidebarWrapper}`}>
-      <div className={Style.overlay} onMouseEnter={closeSidebar} onMouseLeave={closeSidebar}></div>
-      <div className={Style.sidebar}>
-        <div className={Style.header}>
-          <Image src={Logo} alt="logo" className={Style.logo} />
-          <button className={Style.closeNav} onClick={closeSidebar}>
+    <aside className={`${isSidebarOpen ? styles.sidebarWrapper.show : styles.sidebarWrapper}`}>
+      <div className={styles.overlay} onMouseEnter={closeSidebar} onMouseLeave={closeSidebar}></div>
+      <div className={styles.sidebar}>
+        <div className={styles.header}>
+          <Image src={Logo} alt="logo" className={styles.logo} />
+          <button className={styles.closeNav} onClick={closeSidebar}>
             <FaTimes />
           </button>
         </div>
-        <div className={Style.linkList}>
-          <ul className={Style.links}>
+        <div className={styles.linkList}>
+          <ul className={styles.links}>
             <li>
               <Link href="/">home</Link>
             </li>
             <li>
-              <Link href="/shop">shop</Link>
+              <Link href="/product">products</Link>
             </li>
             <li>
               <Link href="/about">about</Link>
             </li>
-            <li>
-              <Link href="/contact">contact</Link>
-            </li>
           </ul>
-          <ul className={Style.iconLink}>
+          <ul className={styles.iconLink}>
             <li>
-              Cart
-              <Image src={Cart} alt="cart" className={Style.cart} />
+              <Link href="/cart">
+                Cart
+                <div className={styles.cartContainer}>
+                  <Image src={Cart} alt="cart" className={styles.cart} />
+                  <div className={styles.count}>75</div>
+                </div>
+              </Link>
             </li>
             <li>
-              Login
-              <Image src={Search} alt="search" className={Style.search} />
+              <Link href="/">
+                Login
+                <Image src={Search} alt="search" className={styles.search} />
+              </Link>
             </li>
           </ul>
         </div>

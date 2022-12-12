@@ -19,7 +19,7 @@ const Product = () => {
             </ul>
           </div>
         </div>
-        <Button href={"shop"} page={"all products"}/>
+        <Button href={"product"} page={"all products"}/>
       </div>
     </section>
   );

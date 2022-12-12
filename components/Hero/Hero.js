@@ -12,7 +12,7 @@ function Hero() {
           <h2 className={styles.blueInfo}>Stylish and look</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
           <Button
-           href={"shop"} page={"shop now"}/>
+           href={"product"} page={"shop now"}/>
         </article>
         <article className={styles.heroImg}>
           <Image src={HeroImage} alt="HeroImage" className={styles.heroImage} />

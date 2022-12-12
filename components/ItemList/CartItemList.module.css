@@ -1,9 +1,10 @@
 .listItem{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 @media screen and (max-width:800px) {
   .listItem{
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }

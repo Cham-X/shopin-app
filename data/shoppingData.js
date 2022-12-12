@@ -3,6 +3,7 @@ const SHOP_DATA = [
     id: 1,
     category: "Hats",
     image: "images/hats/mary-oloumi-KYKnR-pfURc-unsplash.jpg",
+    name:"hats",
     routeName: "hats",
     items: [
       {
@@ -74,7 +75,7 @@ const SHOP_DATA = [
       {
         id: 12,
         name: "Grey Brim",
-        image: "images/hatsrobin-jonathan-deutsch-7pXt9NR9ESQ-unsplash.jpg",
+        image: "images/hats/robin-jonathan-deutsch-7pXt9NR9ESQ-unsplash.jpg",
         price: 18,
       },
     ],
@@ -252,7 +253,7 @@ const SHOP_DATA = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     category: "Men",
     image: "images/men/gez-xavier-mansfield-b34E1vh1tYU-unsplash.jpg",
     routeName: "mens",
