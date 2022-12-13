@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
 import SHOP_DATA from "../data/shoppingData";
+import categories from "../data/categoriesData";
 
 export const AppContext = React.createContext();
 
-const allCategories = ["All Products", ...new Set(SHOP_DATA.map((item) => item.category))];
+const allCategories = ["products", ...new Set(SHOP_DATA.map((item) => item.category))];
+
 export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [category, setCategory] = useState(allCategories);
@@ -11,7 +13,6 @@ export const AppProvider = ({ children }) => {
 
   const openSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-    console.log(category);
   };
 
   const closeSidebar = () => {
@@ -30,7 +31,7 @@ export const AppProvider = ({ children }) => {
     setCategory(newItem);
   };
 
-  return <AppContext.Provider value={{ isSidebarOpen, openSidebar, closeSidebar, filterItems, category, product }}>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={{ isSidebarOpen, openSidebar, closeSidebar, filterItems, categories, category, product,SHOP_DATA }}>{children}</AppContext.Provider>;
 };
 
 export const useGlobalContext = () => {

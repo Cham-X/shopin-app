@@ -109,7 +109,6 @@ li {
 }
 button {
   font-size: 1rem;
-
   border-radius: var(--radius);
   border-color: transparent;
   color: white;
@@ -141,7 +140,7 @@ button {
   h4 {
     line-height: 1;
   }
-  footer{
+  footer {
     display: flex;
     flex-direction: row;
   }

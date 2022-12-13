@@ -6,8 +6,8 @@ import ItemList from '../ItemList/ItemList'
 const ProductList = () => {
   const { product } = useGlobalContext();
   return (
-  <section>
-    <Categories/>
+    <section>
+      <Categories />
       <ItemList data={product} />
     </section>
   );

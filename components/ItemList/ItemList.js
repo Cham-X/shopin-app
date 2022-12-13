@@ -1,17 +1,13 @@
 import styles from "./ItemList.module.css";
 import Item from "../Item/Item";
+import SHOP_DATA from "../../data/shoppingData";
 
-
-function ItemList({data}) {
+function ItemList({ data }) {
   return (
     <ul className={styles.listItem}>
       {data.map((item) => {
-        return <Item 
-        key={item.id} 
-        image={item.image}
-        name={item.name}
-        price={item.price}
-         />;
+        const { id, image, name, price } = item;
+        return <Item key={item.id} image={item.image} name={item.name} price={item.price} />;
       })}
     </ul>
   );

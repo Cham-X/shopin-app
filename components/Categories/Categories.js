@@ -5,8 +5,8 @@ const Categories = () => {
   const { category, filterItems } = useGlobalContext();
   return (
     <div className={styles.btnContainer}>
-      {category.map((item,index) => {
-        return <button key={index} className={styles.filterBtn} onClick={() => filterItems(item)}>{category}</button>;
+      {category.map((category,index) => {
+        return <button key={index} className={styles.filterBtn} onClick={() => filterItems(category)}>{category}</button>;
       })}
     </div>
   );
