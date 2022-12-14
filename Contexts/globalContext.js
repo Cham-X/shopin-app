@@ -19,9 +19,9 @@ export const AppProvider = ({ children }) => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const filterItems = () => {
-    if (category === "All Products") {
-      setCategory(allCategories);
+  const filterItems = (category) => {
+    if (category === "Products") {
+      setProduct(SHOP_DATA);
       return;
     };
     

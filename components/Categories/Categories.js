@@ -6,7 +6,11 @@ const Categories = () => {
   return (
     <div className={styles.btnContainer}>
       {category.map((category,index) => {
-        return <button key={index} className={styles.filterBtn} onClick={() => filterItems(category)}>{category}</button>;
+        return <button key={index} 
+        className={styles.filterBtn}
+        onClick={() => filterItems(category)}>
+          {category}
+          </button>;
       })}
     </div>
   );

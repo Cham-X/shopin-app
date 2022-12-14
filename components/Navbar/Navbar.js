@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Navbar.module.css";
+import { links } from "../../data/navbarData";
+import { iconicalLink } from "../../data/navbarData";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../../Contexts/globalContext";
 
@@ -16,32 +18,30 @@ const Navbar = () => {
           </button>
         </div>
         <ul className={styles.links}>
-          <li>
-            <Link href="/">home</Link>
-          </li>
-          <li>
-            <Link href="/product">products</Link>
-          </li>
-          <li>
-            <Link href="/about">about</Link>
-          </li>
+          {links.map((link) => {
+            const { id, url, text } = link;
+            return (
+              <li key={id}>
+                <Link href={url}>{text}</Link>
+              </li>
+            );
+          })}
         </ul>
         <ul className={styles.links}>
-          <li>
-            <Link href="/cart">
-              Cart
-              <div className={styles.cartContainer}>
-                <Image src="/images/Vector.png" alt="cart" className={styles.cart} width="1000" height="1000" />
-                <div className={styles.count}>75</div>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              Login
-              <Image src="/images/Vector (2).png" alt="search" className={styles.search} width="1000" height="1000" />
-            </Link>
-          </li>
+          {iconicalLink.map((link) => {
+            const { id, url, text, icon } = link;
+            return (
+              <li key={id}>
+                <Link href={url}>
+                  <span>{text}</span>
+                  <span className={styles.cartContainer}>
+                    {icon}
+                    {link.text === "cart" && <span className={styles.count}>9</span>}
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>

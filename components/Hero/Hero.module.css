@@ -3,12 +3,14 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s linear;
 }
 .heroInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  transition: all 0.3s linear;
 }
 .heroHeader,
 .blueInfo {

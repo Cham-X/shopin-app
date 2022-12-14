@@ -1,5 +1,4 @@
 import styles from "/styles/About.module.css";
-// import Overview from "/images/freestocks-_3Q3tsJ01nc-unsplash.jpg";
 import Image from "next/image";
 
 const AboutPage = () => {
@@ -15,7 +14,7 @@ const AboutPage = () => {
           </article>
 
           <article className={styles.aboutImage}>
-            {/* <Image src={Overview} alt="overview" className={styles.aboutImg} /> */}
+            <Image src="/images/freestocks-_3Q3tsJ01nc-unsplash.jpg" alt="overview" className={styles.aboutImg} width="1000" height="1000" />
           </article>
           <article className={styles.aboutContent}>
             <div className={styles.contentHeader}>

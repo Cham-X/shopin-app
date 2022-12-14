@@ -1,14 +1,17 @@
-import Link from 'next/link';
-import Image from 'next/image'
-import {FaTimes} from "react-icons/fa"
-import styles from './Sidebar.module.css'
-import { useGlobalContext } from '../../Contexts/globalContext'
+import Link from "next/link";
+import Image from "next/image";
+import { FaTimes } from "react-icons/fa";
+import styles from "./Sidebar.module.css";
+import { links } from "../../data/navbarData";
+import { iconicalLink } from "../../data/navbarData";
+import { useGlobalContext } from "../../Contexts/globalContext";
 
 const Sidebar = () => {
-  const {isSidebarOpen,closeSidebar} = useGlobalContext()
+  const { isSidebarOpen, closeSidebar } = useGlobalContext();
+
   return (
-    <aside className={`${isSidebarOpen ? styles.sidebarWrapper.show : styles.sidebarWrapper}`}>
-      <div className={styles.overlay} onMouseEnter={closeSidebar} onMouseLeave={closeSidebar}></div>
+    <aside className={`${isSidebarOpen ? styles.show.sidebarWrapper : styles.sidebarWrapper}`}>
+      <div className={styles.overlay} onMouseEnter={closeSidebar}></div>
       <div className={styles.sidebar}>
         <div className={styles.header}>
           <Image src="/images/Shopin.png" alt="logo" className={styles.logo} width="1000" height="1000" />
@@ -18,37 +21,35 @@ const Sidebar = () => {
         </div>
         <div className={styles.linkList}>
           <ul className={styles.links}>
-            <li>
-              <Link href="/">home</Link>
-            </li>
-            <li>
-              <Link href="/product">products</Link>
-            </li>
-            <li>
-              <Link href="/about">about</Link>
-            </li>
+            {links.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id} onClick={closeSidebar}>
+                  <Link href={url}>{text}</Link>
+                </li>
+              );
+            })}
           </ul>
           <ul className={styles.iconLink}>
-            <li>
-              <Link href="/cart">
-                Cart
-                <div className={styles.cartContainer}>
-                  <Image src="/images/Vector.png" alt="cart" className={styles.cart} width="1000" height="1000" />
-                  <div className={styles.count}>75</div>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                Login
-                <Image src="/images/Vector (2).png" alt="search" className={styles.search} width="1000" height="1000" />
-              </Link>
-            </li>
+            {iconicalLink.map((link) => {
+               const {id,url,text,icon} = link;
+               return (
+                 <li key={id} onClick={closeSidebar}>
+                   <Link href={url}>
+                     <span>{text}</span>
+                     <span className={styles.cartContainer}>
+                       {icon}
+                       {link.text === "cart" && <span className={styles.count}>9</span>}
+                     </span>
+                   </Link>
+                 </li>
+               );
+            })}
           </ul>
         </div>
       </div>
     </aside>
   );
-}
+};
 
-export default Sidebar
+export default Sidebar;

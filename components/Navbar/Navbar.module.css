@@ -13,6 +13,7 @@
   margin: 0 auto;
   padding: 1rem;
   position: relative;
+  transition: all 0.3s linear;
 }
 .links {
   display: none;
@@ -29,6 +30,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  transition: all 0.3s linear;
 }
 .toggleBtn{
   color: #6c7ae0;
@@ -40,16 +42,19 @@
 }
 .cartContainer{
   position: relative;
+  font-size: 1.4rem;
 }
 .count{
   background: #6c7ae0;
   color: #fff;
   border-radius: 50%;
-  padding: 3px 7px;
+  padding: 3px 9px;
   position: absolute;
   display: inline-block;
+  font-size: 1rem;
   top: -1rem;
   right: -1.5rem;
+  transition: all 0.3s linear;
 }
 
 @media screen and (min-width: 800px) {

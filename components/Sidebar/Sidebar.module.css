@@ -15,14 +15,19 @@
   right: 0;
   position: fixed;
 }
+.show{
+  transform: translate(0);
+  transition: all 0.3s linear;
+}
 .sidebar {
   position: absolute;
   background: #fff;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 2rem;
   z-index: 2;
+  padding: 1rem;
+ 
 }
 .header {
   display: flex;
@@ -30,9 +35,8 @@
   align-items: center;
 }
 .logo {
-  height: 30px;
+  height: 40px;
   width: 110px;
-  justify-self: center;
 }
 .closeNav {
   background: transparent;
@@ -48,10 +52,10 @@
 }
 .links li {
   margin: 1.2rem 0rem;
-   transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
-.links li:hover{
- color: #6c7ae0;
+.links li:hover {
+  color: #6c7ae0;
 }
 .iconLink {
   display: flex;
@@ -60,18 +64,21 @@
   gap: 7rem;
   margin-top: 4rem;
 }
-.cartContainer{
+.cartContainer {
   position: relative;
+  font-size: 1.4rem;
 }
-.count{
+.count {
   background: #6c7ae0;
   color: #fff;
   border-radius: 50%;
-  padding: 3px 7px;
+  padding: 3px 9px;
   position: absolute;
   display: inline-block;
+  font-size: 1rem;
   top: -1rem;
   right: -1.5rem;
+
 }
 .iconLink li {
   display: flex;

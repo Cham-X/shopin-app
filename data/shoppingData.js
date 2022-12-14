@@ -4,7 +4,7 @@ const SHOP_DATA = [
     name: "Grey Brim",
     category:"Hats",
     image: "images/hats/max-anderson-acCPKySN8Xc-unsplash.jpg",
-    price: 25,
+    price: 25.99,
   },
   {
     id: 2,
