@@ -35,8 +35,9 @@
   justify-content: center;
 }
 .searchIcon {
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #fff;
 }
 .imageContainer {
   align-self: center;

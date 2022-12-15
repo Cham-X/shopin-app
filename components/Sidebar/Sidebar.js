@@ -10,7 +10,7 @@ const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
 
   return (
-    <aside className={`${isSidebarOpen ? styles.show.sidebarWrapper : styles.sidebarWrapper}`}>
+    <aside className={`${isSidebarOpen ? styles.sidebarWrapper.show : styles.sidebarWrapper}`}>
       <div className={styles.overlay} onMouseEnter={closeSidebar}></div>
       <div className={styles.sidebar}>
         <div className={styles.header}>

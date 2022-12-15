@@ -29,6 +29,7 @@ export const AppProvider = ({ children }) => {
       return item.category === category;
     });
     setCategory(newItem);
+    setProduct()
   };
 
   return <AppContext.Provider value={{ isSidebarOpen, openSidebar, closeSidebar, filterItems, categories, category, product,SHOP_DATA }}>{children}</AppContext.Provider>;

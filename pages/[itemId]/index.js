@@ -1,9 +1,9 @@
-import React from 'react'
+import ItemDetails from "../../components/ItemDeatails/ItemDetail"
 
 function ItemDetailPage() {
   return (
     <div>
-      <h2>item details page</h2>
+      <ItemDetails/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import Card from "../Card/Card";
 import styles from "./Item.module.css";
 import Image from "next/image";
+import {FaSearch} from "react-icons/fa"
 import { useRouter } from "next/router";
 
 function Item(props) {
@@ -23,7 +24,7 @@ function Item(props) {
       </Card>
       <div className={styles.overlay}>
         <div className={styles.middle}>
-          <Image src="/images/Vector (2).png" alt="search" width="1000" height="1000" className={styles.searchIcon} />
+          <FaSearch className={styles.searchIcon} />
         </div>
       </div>
     </li>

@@ -15,7 +15,7 @@
   right: 0;
   position: fixed;
 }
-.show{
+.sidebarWrapper.show{
   transform: translate(0);
   transition: all 0.3s linear;
 }
