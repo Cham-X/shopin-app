@@ -1,0 +1,18 @@
+.cartSection{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cartHeader{
+text-align: center;
+margin-bottom: 1.3rem;
+}
+.cartTableHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartTableHeader p{
+  margin: 0;
+}

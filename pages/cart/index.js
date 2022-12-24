@@ -1,10 +1,10 @@
-import React from "react";
+import CartContainer from "../../components/CartContainer/CartContainer";
 
 const Cart = () => {
   return (
     <>
-    <hr />
-      <h1>cart</h1>
+    
+      <CartContainer/>
     </>
   );
 };

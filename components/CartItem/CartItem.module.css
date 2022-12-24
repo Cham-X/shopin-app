@@ -1,0 +1,41 @@
+.CartItem{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0.5rem auto;
+}
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 14rem;
+}
+.cartImage{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5px;
+}
+.amountContainer{
+  min-width: 5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.totalAmount{
+  color: bolder;
+}
+.amountBtn{
+  color: #000;
+}
+.deleteBtn{
+  color: #fff;
+  padding: 0.5rem;
+  background: red;
+  border-radius: 50%;
+}
+.amount{
+  color: #000;
+  font-size: 1.5rem;
+}

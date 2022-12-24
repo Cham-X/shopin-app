@@ -7,7 +7,7 @@ import { iconicalLink } from "../../data/navbarData";
 import { useGlobalContext } from "../../Contexts/globalContext";
 
 const Sidebar = () => {
-  const { isSidebarOpen, closeSidebar } = useGlobalContext();
+  const { isSidebarOpen, closeSidebar,amount } = useGlobalContext();
 
   return (
     <aside className={`${isSidebarOpen ? styles.sidebarWrapper.show : styles.sidebarWrapper}`}>
@@ -39,7 +39,7 @@ const Sidebar = () => {
                      <span>{text}</span>
                      <span className={styles.cartContainer}>
                        {icon}
-                       {link.text === "cart" && <span className={styles.count}>9</span>}
+                       {link.text === "cart" && <span className={styles.count}>{amount}</span>}
                      </span>
                    </Link>
                  </li>

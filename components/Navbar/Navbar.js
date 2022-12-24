@@ -7,7 +7,7 @@ import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../../Contexts/globalContext";
 
 const Navbar = () => {
-  const { openSidebar } = useGlobalContext();
+  const { openSidebar,amount } = useGlobalContext();
   return (
     <nav className={styles.nav}>
       <div className={styles.navbar}>
@@ -36,7 +36,7 @@ const Navbar = () => {
                   <span>{text}</span>
                   <span className={styles.cartContainer}>
                     {icon}
-                    {link.text === "cart" && <span className={styles.count}>9</span>}
+                    {link.text === "cart" && <span className={styles.count}>{amount}</span>}
                   </span>
                 </Link>
               </li>

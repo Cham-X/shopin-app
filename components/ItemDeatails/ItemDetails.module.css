@@ -5,8 +5,8 @@
   gap: 1rem;
 }
 .itemImage{
-  width: 50%;
-  height: 50%;
+  width: 50vw;
+  height: 60vh;
 }
 .description{
   width: 80%;
@@ -17,7 +17,7 @@
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
-  width: 50%;
+  width: 50vw;
 }
 .itemName{
   color: #000;
@@ -32,12 +32,13 @@
 }
 .btn2{
   background:#000;
+  color: #000;
 }
 
 @media screen and (max-width:800px) {
   .itemImage{
-  width: 100%;
-  height: 40%;
+  width: 90vw;
+  height: 50vh;
 }
 .itemContent{
   width: 100%;

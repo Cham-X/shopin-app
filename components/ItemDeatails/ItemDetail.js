@@ -7,15 +7,15 @@ function ItemDetail(props) {
     <>
       <section className={styles.itemSection}>
         <article>
-          <Image src="/images/shoes/radek-skrzypczak-WlB8TsI_th0-unsplash.jpg" alt="item image" width="1000" height="1000" className={styles.itemImage} />
+          <Image src={"/" + props.image} width="1000" height="1000" className={styles.itemImage} />
         </article>
         <article className={styles.contentArticle}>
           <div className={styles.itemContent}>
-            <p className={styles.itemName}>Lorem ipsum</p>
-            <p className={styles.itemPrice}>$344</p>
+            <p className={styles.itemName}>{props.name}</p>
+            <p className={styles.itemPrice}>${props.price}</p>
           </div>
           <div className={styles.itemDescription}>
-            <p className={styles.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad laboriosam, et error qui nostrum ut eos aspernatur, repellat cupiditate tenetur perferendis quibusdam excepturi animi dolor in! Non molestiae nemo nulla!</p>
+            <p className={styles.description}>{props.description}</p>
           </div>
         </article>
         <div className={styles.btnContainer}>
