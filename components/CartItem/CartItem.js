@@ -20,13 +20,13 @@ const CartItem = ({id,image,name,price,quantity}) => {
           <FaMinus />
         </button>
         {/* item quantity */}
-        <h4 className={styles.amount}>{quantity}</h4>
+        <h4 className={styles.amount}>m{quantity}</h4>
         {/* increase button */}
         <button className={styles.amountBtn} onClick={() => increase(id)}>
           <FaPlus />
         </button>
       </div>
-      <h4 className={styles.totalAmount}>$456</h4>
+      <h4 className={styles.totalAmount}>${quantity * price}</h4>
       {/* remove button */}
       <button className={styles.deleteBtn} onClick={() => remove(id)}>
         <FaTrash />

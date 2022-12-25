@@ -8,9 +8,9 @@ export const AppContext = React.createContext();
 const allCategories = ["products", ...new Set(SHOP_DATA.map((item) => item.category))];
 
 const initaialState = {
-  cart: SHOP_DATA,
+  cart: [],
   total: 0,
-  amount: 5,
+  amount: 0,
 };
 
 export const AppProvider = ({ children }) => {
@@ -24,20 +24,20 @@ export const AppProvider = ({ children }) => {
   };
 
   const remove = (id) => {
-    dispatch({ type: "REMOVE", payload: id });
+    dispatch({ type: "REMOVE_FROM_CART", payload: id });
   };
 
   const add = (id) => {
-    dispatch({ type: "ADD", payload: id });
+    dispatch({ type: "ADD_TO_CART", payload: id });
   };
 
   const increase = (id) => {
-    dispatch({ type: "INCREASE", payload: id });
+    dispatch({ type: "INCREASE_QUANTITY", payload: id });
     console.log('add')
   };
 
   const decrease = (id) => {
-    dispatch({ type: "DECREASE", payload: id });
+    dispatch({ type: "DECREASE_QUANTITY", payload: id });
   };
 
   const openSidebar = () => {

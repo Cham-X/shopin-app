@@ -5,19 +5,19 @@ const reducer = (state, action) => {
       cart: [],
     };
   }
-  if (action.type === "REMOVE") {
+  if (action.type === "REMOVE_FROM_CART") {
     return {
       ...state,
       cart: state.cart.filter((cartItem) => cartItem.id !== action.payload),
     };
   }
-  if(action.type === "ADD"){
+  if(action.type === "ADD_TO_CART"){
     return{
       ...state,
       cart:state.cart.push()
     }
   }
-  if (action.type === "INCREASE") {
+  if (action.type === "INCREASE_QUANTITY") {
     let termCart = state.cart.map((cartItem) => {
       if (cartItem.id === action.payload) {
         return {
@@ -32,7 +32,7 @@ const reducer = (state, action) => {
       cart: termCart,
     };
   }
-  if (action.type === "DECREASE") {
+  if (action.type === "DECREASE_QUANTITY") {
     let termCart = state.cart
       .map((cartItem) => {
         if (cartItem.id === action.payload) {
