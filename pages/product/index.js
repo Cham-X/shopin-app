@@ -5,7 +5,6 @@ import SHOP_DATA from "../../data/shoppingData";
 const productPage = (props) => {
   return (
     <>
-      <hr />
       <section>
         <Categories />
         <ItemList data={props.productData} />
@@ -19,6 +18,7 @@ export async function getStaticProps() {
     props: {
       productData: SHOP_DATA,
     },
+    revalidate: 1,
   };
 }
 export default productPage;

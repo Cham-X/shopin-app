@@ -1,10 +1,10 @@
-.container{
-  /* background: #bcccdc; */
-  width: 100vw;
+.container {
+  width: 100%;
   align-content: center;
   justify-content: center;
+  transition: all 0.3s linear;
 }
-.ourProduct{
+.ourProduct {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,14 +12,14 @@
   gap: 2rem;
   padding: 2rem;
 }
-.sectionHeader{
+.sectionHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
 }
-.underline{
+.underline {
   height: 2px;
   width: 9.5rem;
   background: #6c7ae0;

@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useState } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import SHOP_DATA from "../data/shoppingData";
 import categories from "../data/categoriesData";
 import reducer from "../Reducer/Reducer";
@@ -7,8 +7,13 @@ export const AppContext = React.createContext();
 
 const allCategories = ["products", ...new Set(SHOP_DATA.map((item) => item.category))];
 
+export let shopItems = [];
+SHOP_DATA.forEach((item) => {
+  shopItems.push(item);
+});
 const initaialState = {
-  cart: [],
+  shopItems,
+  cartItems: [],
   total: 0,
   amount: 0,
 };
@@ -23,22 +28,25 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: "CLEAR_CART" });
   };
 
-  const remove = (id) => {
-    dispatch({ type: "REMOVE_FROM_CART", payload: id });
+  const removeFromCart = (id) => {
+    dispatch({ type: "REMOVE_FROM_CART", payload: parseInt(id) });
   };
 
-  const add = (id) => {
-    dispatch({ type: "ADD_TO_CART", payload: id });
+  const addToCart = (id) => {
+    dispatch({ type: "ADD_TO_CART", payload: parseInt(id) });
   };
 
-  const increase = (id) => {
-    dispatch({ type: "INCREASE_QUANTITY", payload: id });
-    console.log('add')
+  const increaseQuantity = (id) => {
+    dispatch({ type: "INCREASE_QUANTITY", payload: parseInt(id) });
   };
 
-  const decrease = (id) => {
-    dispatch({ type: "DECREASE_QUANTITY", payload: id });
+  const decreaseQuantity = (id) => {
+    dispatch({ type: "DECREASE_QUANTITY", payload: parseInt(id) });
   };
+
+  // useEffect(() => {
+  //   dispatch({ type: "GET_TOTAL" });
+  // }, [state.cartItems]);
 
   const openSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -61,7 +69,27 @@ export const AppProvider = ({ children }) => {
     setProduct();
   };
 
-  return <AppContext.Provider value={{ ...state, clearCart, remove,add, increase, decrease, isSidebarOpen, openSidebar, closeSidebar, filterItems, categories, category, product, SHOP_DATA }}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider
+      value={{
+        ...state,
+        clearCart,
+        removeFromCart,
+        addToCart,
+        increaseQuantity,
+        decreaseQuantity,
+        isSidebarOpen,
+        openSidebar,
+        closeSidebar,
+        filterItems,
+        categories,
+        category,
+        product,
+        SHOP_DATA,
+      }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 export const useGlobalContext = () => {

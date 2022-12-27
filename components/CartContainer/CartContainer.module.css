@@ -16,10 +16,25 @@ margin-bottom: 1.3rem;
 .cartTableHeader p{
   margin: 0;
 }
+.cartFooter{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.cartBtn{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
 .emptyCart{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+@media screen and (max-width:600px) {
+  .cartAmount{
+    display: none;
+  }
 }

@@ -4,7 +4,7 @@ import SHOP_DATA from "../../data/shoppingData";
 function ItemDetailPage(props) {
   return (
     <div>
-      <ItemDetails name={props.productData.name} image={props.productData.image} price={props.productData.price} description={props.productData.description} />
+      <ItemDetails id={props.productData.id} name={props.productData.name} image={props.productData.image} price={props.productData.price} description={props.productData.description} />
     </div>
   );
 }
@@ -32,6 +32,7 @@ export async function getStaticProps(context) {
         description:selectedItem.description,
       },
     },
+    revalidate:1
   };
 }
 

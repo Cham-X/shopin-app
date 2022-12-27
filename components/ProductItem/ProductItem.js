@@ -1,10 +1,10 @@
 import Card from "../Card/Card";
-import styles from "./Item.module.css";
+import styles from "./ProductItem.module.css";
 import Image from "next/image";
 import {FaSearch} from "react-icons/fa"
 import { useRouter } from "next/router";
 
-function Item(props) {
+function ProductItem(props) {
   const router = useRouter();
 
   const showItemDetails = () => {
@@ -31,4 +31,4 @@ function Item(props) {
   );
 }
 
-export default Item;
+export default ProductItem;

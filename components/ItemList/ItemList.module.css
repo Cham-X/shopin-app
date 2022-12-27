@@ -1,6 +1,7 @@
 .listItem{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  transition: all 0.3s linear
 }
 @media screen and (max-width:800px) {
   .listItem{

@@ -1,4 +1,4 @@
-import styles from "./ProductItem.module.css";
+import styles from "./ProductItems.module.css";
 import ItemList from "../ItemList/ItemList";
 import Button from "../Button/Button";
 import { useGlobalContext } from "../../Contexts/globalContext";

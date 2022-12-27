@@ -1,26 +1,33 @@
 import Button from "../Button/Button";
 import Image from "next/image";
-import styles from "./ItemDetails.module.css"
+import styles from "./ItemDetails.module.css";
+import { useGlobalContext } from "../../Contexts/globalContext";
 
-function ItemDetail(props) {
+function ItemDetail({ id, name, image, description, price }) {
+  const { addToCart } = useGlobalContext();
+  
   return (
     <>
       <section className={styles.itemSection}>
         <article>
-          <Image src={"/" + props.image} width="1000" height="1000" className={styles.itemImage} />
+          <Image src={"/" + image} alt={name} width="1000" height="1000" className={styles.itemImage} />
         </article>
         <article className={styles.contentArticle}>
           <div className={styles.itemContent}>
-            <p className={styles.itemName}>{props.name}</p>
-            <p className={styles.itemPrice}>${props.price}</p>
+            <p className={styles.itemName}>{name}</p>
+            <p className={styles.itemPrice}>${price}</p>
           </div>
           <div className={styles.itemDescription}>
-            <p className={styles.description}>{props.description}</p>
+            <p className={styles.description}>{description}</p>
           </div>
         </article>
         <div className={styles.btnContainer}>
-          <Button className={styles.btn1} href={"product"} page={"Back to Shopping"} />
-          <Button className={styles.btn2} href={"cart"} page={"add to cart"} />
+          <div>
+            <Button className={styles.btn1} href={"product"} page={"Back to Shopping"} />
+          </div>
+          <div onClick={() => addToCart(id)}>
+            <Button className={styles.btn2} href={"cart"} page={"add to cart"} />
+          </div>
         </div>
       </section>
     </>
