@@ -37,7 +37,8 @@
 .searchIcon {
   height: 1.5rem;
   width: 1.5rem;
-  color: #fff;
+  color: #6c7ae0;
+  z-index: 99999;
 }
 .imageContainer {
   align-self: center;

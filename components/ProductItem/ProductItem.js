@@ -15,7 +15,7 @@ function ProductItem(props) {
     <li className={styles.item} onClick={showItemDetails}>
       <Card>
         <div className={styles.imageContainer}>
-          <Image src={"/" + props.image} alt="itemImage" className={styles.itemImage} width="1000" height="1000" />
+          <Image src={"/" + props.image} alt={props.name} className={styles.itemImage} width="1000" height="1000" />
         </div>
         <div className={styles.itemDetails}>
           <p className={styles.itemName}>{props.name}</p>

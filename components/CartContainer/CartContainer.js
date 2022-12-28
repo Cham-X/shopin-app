@@ -5,6 +5,10 @@ import styles from "./CartContainer.module.css";
 
 function CartContainer() {
   const { cartItems, clearCart } = useGlobalContext();
+
+  function getTotalPrice() {
+    return cartItems.reduce((accumulator, item) => accumulator + item.quantity * item.price, 0);
+  }
   if (cartItems.length === 0) {
     return (
       <section className={styles.cartSection}>
@@ -49,7 +53,7 @@ function CartContainer() {
           </div>
         </div>
         <div>
-          <h2>Grand Total : $</h2>
+          <h2>Grand Total : ${ getTotalPrice()}</h2>
         </div>
       </footer>
     </section>

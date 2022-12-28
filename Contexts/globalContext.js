@@ -14,8 +14,7 @@ SHOP_DATA.forEach((item) => {
 const initaialState = {
   shopItems,
   cartItems: [],
-  total: 0,
-  amount: 0,
+  // total: 0,
 };
 
 export const AppProvider = ({ children }) => {
@@ -43,10 +42,6 @@ export const AppProvider = ({ children }) => {
   const decreaseQuantity = (id) => {
     dispatch({ type: "DECREASE_QUANTITY", payload: parseInt(id) });
   };
-
-  // useEffect(() => {
-  //   dispatch({ type: "GET_TOTAL" });
-  // }, [state.cartItems]);
 
   const openSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -78,6 +73,7 @@ export const AppProvider = ({ children }) => {
         addToCart,
         increaseQuantity,
         decreaseQuantity,
+
         isSidebarOpen,
         openSidebar,
         closeSidebar,

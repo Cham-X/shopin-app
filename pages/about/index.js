@@ -4,7 +4,6 @@ import Image from "next/image";
 const AboutPage = () => {
   return (
     <>
-      <hr />
       <section className={styles.container}>
         <div className={styles.main}>
           <article className={styles.pageTitle}>
