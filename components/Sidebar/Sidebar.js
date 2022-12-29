@@ -15,7 +15,7 @@ const Sidebar = () => {
    }
 
   return (
-    <aside className={`${isSidebarOpen ? styles.sidebarWrapper.show : styles.sidebarWrapper}`}>
+    <aside className={`${isSidebarOpen ? styles.sidebarWrapper + "show" : styles.sidebarWrapper}`}>
       <div className={styles.overlay} onMouseEnter={closeSidebar}></div>
       <div className={styles.sidebar}>
         <div className={styles.header}>
@@ -37,18 +37,18 @@ const Sidebar = () => {
           </ul>
           <ul className={styles.iconLink}>
             {iconicalLink.map((link) => {
-               const {id,url,text,icon} = link;
-               return (
-                 <li key={id} onClick={closeSidebar}>
-                   <Link href={url}>
-                     <span>{text}</span>
-                     <span className={styles.cartContainer}>
-                       {icon}
-                       {link.text === "cart" && <span className={styles.count}>{getTotalItem()}</span>}
-                     </span>
-                   </Link>
-                 </li>
-               );
+              const { id, url, text, icon } = link;
+              return (
+                <li key={id} onClick={closeSidebar}>
+                  <Link href={url}>
+                    <span>{text}</span>
+                    <span className={styles.cartContainer}>
+                      {icon}
+                      {link.text === "cart" && <span className={styles.count}>{getTotalItem()}</span>}
+                    </span>
+                  </Link>
+                </li>
+              );
             })}
           </ul>
         </div>

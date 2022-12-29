@@ -20,6 +20,7 @@ margin-bottom: 1.3rem;
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 1rem;
 }
 .cartBtn{
   display: flex;
@@ -34,7 +35,14 @@ margin-bottom: 1.3rem;
   gap: 1rem;
 }
 @media screen and (max-width:600px) {
+ .cartTableHeader {
+    font-size: 0.5rem;
+    font-weight: 100;
+  }
   .cartAmount{
     display: none;
+  }
+  .grandTotal{
+    font-size: 1rem;
   }
 }

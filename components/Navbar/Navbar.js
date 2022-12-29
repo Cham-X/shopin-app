@@ -7,7 +7,7 @@ import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../../Contexts/globalContext";
 
 const Navbar = () => {
-  const { openSidebar, amount,cartItems } = useGlobalContext();
+  const { openSidebar,cartItems } = useGlobalContext();
 
   function getTotalItem(){
 return cartItems.reduce((accumulator,item) => accumulator + item.quantity,0)

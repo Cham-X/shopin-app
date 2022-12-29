@@ -16,7 +16,6 @@ export async function getStaticProps() {
     props: {
       productData: SHOP_DATA,
     },
-    revalidate: 1,
   };
 }
 export default productPage;

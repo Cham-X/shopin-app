@@ -53,7 +53,7 @@ function CartContainer() {
           </div>
         </div>
         <div>
-          <h2>Grand Total : ${ getTotalPrice()}</h2>
+          <h2 className={styles.grandTotal}>Grand Total : ${ getTotalPrice()}</h2>
         </div>
       </footer>
     </section>
