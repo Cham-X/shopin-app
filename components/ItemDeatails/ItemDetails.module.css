@@ -5,8 +5,8 @@
   flex-direction: column;
   max-height: 100hv;
   max-width: 50vw;
-  gap: 1rem;
   transition: all 0.3s linear
+  
 }
 .itemImage{
   width: 50vw;
@@ -39,9 +39,9 @@
   color: #000;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:600px) {
   .itemSection{
-    min-width: 90vw;
+    max-width: 90vw;
   }
   .itemImage{
   width: 100%;

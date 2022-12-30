@@ -1,5 +1,5 @@
 .item {
-  width: 16rem;
+  max-width: 16rem;
   height: 18rem;
   margin: 1rem;
   position: relative;
@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 800px) {
   .item {
-    width: 80vw;
+    max-width: 80vw;
   }
   .itemImage {
     width: 100%;

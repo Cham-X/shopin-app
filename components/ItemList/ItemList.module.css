@@ -1,11 +1,19 @@
-.listItem{
+.listItem {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  transition: all 0.3s linear
+  grid-template-columns: repeat(4, 1fr);
+  transition: all 0.3s linear;
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (max-width:800px) {
-  .listItem{
+@media screen and (max-width: 800px) {
+  .listItem {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .listItem {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 }
