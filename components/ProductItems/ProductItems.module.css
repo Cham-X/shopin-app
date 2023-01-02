@@ -24,3 +24,19 @@
   width: 9.5rem;
   background: #6c7ae0;
 }
+.itemCategory{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width:800px) {
+  .itemCategory{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width:600px) {
+  .itemCategory{
+    grid-template-columns: 1fr;
+  }
+}

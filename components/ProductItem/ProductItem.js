@@ -8,7 +8,7 @@ function ProductItem(props) {
   const router = useRouter();
 
   const showItemDetails = () => {
-    router.push("/" + props.id);
+    router.push(`/${props.category}/` + props.id);
   };
 
   return (

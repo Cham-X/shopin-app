@@ -1,10 +1,10 @@
 import styles from "./ProductItems.module.css";
-import ItemList from "../ItemList/ItemList";
 import Button from "../Button/Button";
 import { useGlobalContext } from "../../Contexts/globalContext";
+import Categories from "../Categories/Categories";
 
 const Product = () => {
-  const {categories} = useGlobalContext()
+  const { categories } = useGlobalContext();
   return (
     <section className={styles.container}>
       <div className={styles.ourProduct}>
@@ -13,13 +13,13 @@ const Product = () => {
           <div className={styles.underline}></div>
         </div>
         <div className={styles.products}>
-          <div>
-            <ul>
-              <ItemList data={categories}/>
-            </ul>
-          </div>
+          <ul className={styles.itemCategory}>
+            {categories.map((item) => {
+              return <Categories key={item.id} {...item} />;
+            })}
+          </ul>
         </div>
-        <Button href={"product"} page={"all products"}/>
+        <Button href={"product"} page={"all products"} />
       </div>
     </section>
   );

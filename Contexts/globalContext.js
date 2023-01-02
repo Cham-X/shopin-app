@@ -5,7 +5,6 @@ import reducer from "../Reducer/Reducer";
 
 export const AppContext = React.createContext();
 
-const allCategories = ["products", ...new Set(SHOP_DATA.map((item) => item.category))];
 
 export let shopItems = [];
 SHOP_DATA.forEach((item) => {
@@ -14,13 +13,12 @@ SHOP_DATA.forEach((item) => {
 const initaialState = {
   shopItems,
   cartItems: [],
-  // total: 0,
 };
 
 export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [category, setCategory] = useState(allCategories);
-  const [product, setProduct] = useState(SHOP_DATA);
+
+  // const [product, setProduct] = useState(SHOP_DATA);
   const [state, dispatch] = useReducer(reducer, initaialState);
 
   const clearCart = () => {
@@ -51,18 +49,7 @@ export const AppProvider = ({ children }) => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const filterItems = (category) => {
-    if (category === "Products") {
-      setProduct(SHOP_DATA);
-      return;
-    }
-
-    const newItem = SHOP_DATA.filter((item) => {
-      return item.category === category;
-    });
-    setCategory(newItem);
-    setProduct();
-  };
+ 
 
   return (
     <AppContext.Provider
@@ -73,14 +60,11 @@ export const AppProvider = ({ children }) => {
         addToCart,
         increaseQuantity,
         decreaseQuantity,
-
         isSidebarOpen,
         openSidebar,
         closeSidebar,
-        filterItems,
         categories,
-        category,
-        product,
+        // product,
         SHOP_DATA,
       }}>
       {children}
