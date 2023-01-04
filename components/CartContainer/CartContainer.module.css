@@ -36,12 +36,9 @@ margin-bottom: 1.3rem;
 }
 @media screen and (max-width:600px) {
  .cartTableHeader {
-    font-size: 0.5rem;
-    font-weight: 100;
-  }
-  .cartAmount{
     display: none;
   }
+
   .grandTotal{
     font-size: 1rem;
   }

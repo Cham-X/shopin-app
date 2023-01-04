@@ -17,7 +17,7 @@ const CartItem = ({ id, image, name, price, quantity }) => {
       <div>
         <h4 className={styles.itemPrice}>${price}</h4>
       </div>
-      <div className={styles.amountContainer}>
+      <div className={styles.quantityContainer}>
         {/* decrease button */}
         <button className={styles.amountBtn} onClick={() => decreaseQuantity(id)}>
           <FaMinus />
