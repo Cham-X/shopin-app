@@ -12,13 +12,13 @@ const ItemCategory = (props) => {
     return item.category;
   });
   const router = useRouter();
-  if (!itemCategories.includes(props.categoryData)) {
-    return (
-      <section>
-        <h2>{router.query.itemCategory} Category not found</h2>
-      </section>
-    );
-  }
+  // if (!itemCategories.includes(props.categoryData)) {
+  //   return (
+  //     <section>
+  //       <h2>{router.query.itemCategory} Category not found</h2>
+  //     </section>
+  //   );
+  // } 
   return (
     <>
       <section>
