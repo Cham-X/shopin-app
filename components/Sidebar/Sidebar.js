@@ -15,8 +15,7 @@ const Sidebar = () => {
    }
 
   return (
-    <aside className={`${isSidebarOpen ? styles.sidebarWrapper + "show" : styles.sidebarWrapper}`}>
-      <div className={styles.overlay} onMouseEnter={closeSidebar}></div>
+    <aside className={!isSidebarOpen ?  styles.sidebarWrapper: `${styles.sidebarWrapper} ${styles.show}` }>
       <div className={styles.sidebar}>
         <div className={styles.header}>
           <Image src="/images/Shopin.png" alt="logo" className={styles.logo} width="1000" height="1000" />

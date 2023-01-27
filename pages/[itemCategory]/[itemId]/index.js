@@ -3,16 +3,23 @@ import ItemDetails from "../../../components/ItemDeatails/ItemDetail";
 import SHOP_DATA from "../../../data/shoppingData";
 
 function ItemDetailPage(props) {
-
+  const router = useRouter();
+  const itemId = router.query.id;
   return (
     <div>
-      <ItemDetails id={props.productData.id} name={props.productData.name} image={props.productData.image} price={props.productData.price} description={props.productData.description} />
+      <ItemDetails id={itemId} name={props.productData.name} image={props.productData.image} price={props.productData.price} description={props.productData.description}/>
     </div>
   );
 }
 
+export async function getStaticPaths() {
+  return {
+    fallback: false,
+    paths: SHOP_DATA.map((item) => item.id)
+  };
+}
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const itemId = context.query.itemId;
 
   const selectedItem = SHOP_DATA.find((item) => item.id.toString() === itemId);
@@ -28,5 +35,7 @@ export async function getServerSideProps(context) {
     },
   };
 }
+
+
 
 export default ItemDetailPage;
