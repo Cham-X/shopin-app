@@ -8,21 +8,11 @@ const getProductByCategory = (category) => {
 };
 
 const ItemCategory = (props) => {
-  const itemCategories = SHOP_DATA.map((item) => {
-    return item.category;
-  });
   const router = useRouter();
-  // if (!itemCategories.includes(props.categoryData)) {
-  //   return (
-  //     <section>
-  //       <h2>{router.query.itemCategory} Category not found</h2>
-  //     </section>
-  //   );
-  // } 
   return (
     <>
       <section>
-        <h2>Result for {router.query.itemCategory}</h2>
+        <h2>Result for {router.query.itemCategory} items</h2>
         <ItemList data={props.categoryData} />
       </section>
     </>

@@ -1,4 +1,9 @@
 const reducer = (state, action) => {
+  // if(action.type === "init_stored"){
+  //   return{
+      
+  //   }
+  // }
   if (action.type === "CLEAR_CART") {
     return {
       ...state,

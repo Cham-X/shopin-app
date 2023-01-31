@@ -3,11 +3,14 @@ import Hero from "../components/Hero/Hero";
 import Product from "../components/ProductItems/ProductItems"
 
 
-export default function Home() {
+function HomePage() {
   return (
     <>
     <Hero/>
     <Product/>
     </>
-  );
+  )
 }
+
+export default HomePage;
+

@@ -27,7 +27,7 @@ export const iconicalLink = [
   },
   {
     id: 2,
-    url: "/",
+    url: "/login",
     text:"login",
     icon: <FaUser/>,
   },

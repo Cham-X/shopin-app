@@ -18,7 +18,6 @@ const initaialState = {
 export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // const [product, setProduct] = useState(SHOP_DATA);
   const [state, dispatch] = useReducer(reducer, initaialState);
 
   const clearCart = () => {
@@ -49,6 +48,20 @@ export const AppProvider = ({ children }) => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+//   useEffect(() => {
+//     if (JSON.parse(localStorage.getItem("initaialState"))) {
+//       dispatch({
+//         type:"init_stored",
+//         cartItems:JSON.parse(localStorage.getItem("initaialState")),
+//       })
+//     }
+//   },[]);
+
+//   useEffect(() => {
+// if(state !== initaialState){
+//   localStorage.setItem("state",JSON.stringify(state))
+// }
+//   },[state])
  
 
   return (
@@ -64,7 +77,6 @@ export const AppProvider = ({ children }) => {
         openSidebar,
         closeSidebar,
         categories,
-        // product,
         SHOP_DATA,
       }}>
       {children}

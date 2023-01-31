@@ -12,12 +12,7 @@ function ItemDetailPage(props) {
   );
 }
 
-// export async function getStaticPaths() {
-//   return {
-//     fallback: false,
-//     paths: SHOP_DATA.map((item) => item.id)
-//   };
-// }
+
 
 export async function getServerSideProps(context) {
   const itemId = context.query.itemId;

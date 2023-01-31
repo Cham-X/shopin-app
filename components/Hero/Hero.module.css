@@ -25,7 +25,7 @@
 }
 .heroImage {
   width: 85%;
-  height: 90vh;
+  max-height: 90%;
 }
 .blueInfo {
   color: #6c7ae0;
@@ -39,7 +39,7 @@
     justify-items: center;
     align-items: center;
     width: 95%;
-    height: 75vh;
+    height: 80vh;
   }
   .heroImg {
     display: none;

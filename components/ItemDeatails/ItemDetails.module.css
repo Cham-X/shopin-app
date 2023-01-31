@@ -5,8 +5,8 @@
   flex-direction: column;
   max-height: 100hv;
   max-width: 50vw;
-  transition: all 0.3s linear
-  
+  transition: all 0.3s linear;
+  margin:1rem auto;
 }
 .itemImage{
   width: 50vw;
