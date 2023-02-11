@@ -7,11 +7,13 @@
   transform: translate(-100%);
   transition: all 0.4s ease-in-out;
 }
-.show{
+
+.show {
   z-index: 9999;
   transform: translate(0);
-  transition:all 0.5s ease-in-out
+  transition: all 0.5s ease-in-out
 }
+
 .sidebar {
   position: absolute;
   background: #fff;
@@ -20,8 +22,9 @@
   width: 100%;
   height: 100vh;
   z-index: 3;
-  
+
 }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -30,33 +33,40 @@
   width: 100%;
   padding: 1rem;
 }
+
 .logo {
   height: 40px;
   width: 110px;
 }
+
 .closeNav {
   background: transparent;
   color: red;
   font-size: 2.5rem;
 }
-.closeNav:hover{
+
+.closeNav:hover {
   transform: rotate(90deg);
 }
+
 .linkList {
   display: flex;
   flex-direction: column;
   text-align: left;
   justify-content: center;
   margin-top: 1rem;
-  padding: 0  1rem;
+  padding: 0 1rem;
 }
+
 .links li {
   margin: 1.2rem 0rem;
   transition: all 0.3s linear;
 }
+
 .links li:hover {
   color: #6c7ae0;
 }
+
 .iconLink {
   display: flex;
   align-items: center;
@@ -64,10 +74,12 @@
   gap: 7rem;
   margin-top: 4rem;
 }
+
 .cartContainer {
   position: relative;
   font-size: 1.4rem;
 }
+
 .count {
   background: #6c7ae0;
   color: #fff;
@@ -79,12 +91,14 @@
   top: -1rem;
   right: -1.5rem;
 }
+
 .iconLink li {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
 }
+
 .search,
 .cart {
   width: 1.5rem;

@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useReducer, useState } from "react";
 import SHOP_DATA from "../data/shoppingData";
 import categories from "../data/categoriesData";
 import reducer from "../Reducer/Reducer";
+import { onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { auth } from "../config/firebase";
+
 
 export const AppContext = React.createContext();
 
@@ -17,8 +20,39 @@ const initaialState = {
 
 export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const [state, dispatch] = useReducer(reducer, initaialState);
+  const [user, setUser] = useState({ email: null, uid: null });
+  const [loading, setLoading] = useState(true);
+
+
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser({
+          email: user.email,
+          uid: user.uid,
+        });
+      } else {
+        setUser({ email: null, uid: null });
+      }
+    });
+    setLoading(false);
+
+    return () => unsubscribe();
+  }, []);
+
+
+  const signUp = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
+  const logIn = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+  const logOut = async () => {
+    setUser({ email: null, password: null });
+    await signOut(auth);
+  };
 
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
@@ -48,26 +82,15 @@ export const AppProvider = ({ children }) => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-//   useEffect(() => {
-//     if (JSON.parse(localStorage.getItem("initaialState"))) {
-//       dispatch({
-//         type:"init_stored",
-//         cartItems:JSON.parse(localStorage.getItem("initaialState")),
-//       })
-//     }
-//   },[]);
-
-//   useEffect(() => {
-// if(state !== initaialState){
-//   localStorage.setItem("state",JSON.stringify(state))
-// }
-//   },[state])
- 
 
   return (
     <AppContext.Provider
       value={{
         ...state,
+        user,
+        signUp,
+        logOut,
+        logIn,
         clearCart,
         removeFromCart,
         addToCart,
@@ -78,6 +101,7 @@ export const AppProvider = ({ children }) => {
         closeSidebar,
         categories,
         SHOP_DATA,
+
       }}>
       {children}
     </AppContext.Provider>
@@ -87,3 +111,5 @@ export const AppProvider = ({ children }) => {
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };
+
+

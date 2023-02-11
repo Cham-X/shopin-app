@@ -1,5 +1,5 @@
-import CartItem from "../../components/CartItem/CartItem";
-import Button from "../../components/Button/Button";
+import CartItem from "../CartItem/CartItem";
+import Button from "../Button/Button";
 import { useGlobalContext } from "../../Contexts/globalContext";
 import styles from "./CartContainer.module.css";
 
@@ -53,7 +53,7 @@ function CartContainer() {
           </div>
         </div>
         <div>
-          <h2 className={styles.grandTotal}>Grand Total : ${ getTotalPrice()}</h2>
+          <h2 className={styles.grandTotal}>Grand Total : ${getTotalPrice()}</h2>
         </div>
       </footer>
     </section>

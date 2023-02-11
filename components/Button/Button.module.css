@@ -3,14 +3,17 @@
   padding: 0.5rem 2rem;
   transition: all 0.3s linear;
 }
+
 .btn:hover {
   background: #8893e7;
 }
+
 .btn a {
   color: #ffff;
   font-weight: 500;
   text-transform: uppercase;
 }
+
 @media screen and (max-width: 800px) {
   .btn a {
     font-size: 0.7rem;

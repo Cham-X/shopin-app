@@ -5,6 +5,7 @@
   justify-content: center;
   transition: all 0.3s linear;
 }
+
 .heroInfo {
   display: flex;
   flex-direction: column;
@@ -12,6 +13,7 @@
   align-items: flex-start;
   transition: all 0.3s linear;
 }
+
 .heroHeader,
 .blueInfo {
   font-family: "PT Sans";
@@ -20,13 +22,16 @@
   font-size: 40px;
   line-height: 50px;
 }
+
 .heroImg {
   align-self: flex-end;
 }
+
 .heroImage {
   width: 85%;
   max-height: 90%;
 }
+
 .blueInfo {
   color: #6c7ae0;
   letter-spacing: 0.2rem;
@@ -38,14 +43,16 @@
     display: flex;
     justify-items: center;
     align-items: center;
-    width: 95%;
-    height: 80vh;
+    min-height: 60vh;
   }
+
   .heroImg {
     display: none;
   }
 }
+
 @media screen and (max-width: 500px) {
+
   .heroHeader,
   .blueInfo {
     font-size: 30px;
