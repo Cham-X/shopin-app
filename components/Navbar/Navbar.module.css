@@ -3,10 +3,12 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+
 .logo {
   height: 40px;
   width: 110px;
 }
+
 .navbar {
   max-width: 1170px;
   width: 100vw;
@@ -14,17 +16,19 @@
   padding: 0.5rem 1rem;
   position: relative;
   transition: all 0.3s linear;
- 
 }
+
 .links {
   display: none;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5rem;
 }
+
 .links li {
   margin: 0.5rem 1rem;
   display: flex;
@@ -33,20 +37,24 @@
   gap: 0.5rem;
   transition: all 0.3s linear;
 }
-.toggleBtn{
+
+.toggleBtn {
   color: #6c7ae0;
   background: transparent;
-   font-size: 2rem;
+  font-size: 2rem;
 }
+
 .toggleBtn:hover {
   color: #000;
   transform: rotate(90deg);
 }
-.cartContainer{
+
+.cartContainer {
   position: relative;
   font-size: 1.4rem;
 }
-.count{
+
+.count {
   background: #6c7ae0;
   color: #fff;
   border-radius: 50%;
@@ -68,9 +76,11 @@
     display: flex;
     justify-content: space-between;
   }
+
   .toggleBtn {
     display: none;
   }
+
   .links {
     display: flex;
     align-items: center;

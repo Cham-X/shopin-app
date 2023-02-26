@@ -1,5 +1,4 @@
-const SHOP_DATA = [
-  {
+const SHOP_DATA = [{
     id: 1,
     name: "Grey Brim",
     category: "Hats",
@@ -237,7 +236,7 @@ const SHOP_DATA = [
     id: 30,
     name: "Adipisicing",
     category: "Women",
-    image: "images/women/Screenshot_20200729-111534.png",
+    image: "images/women/jon-ly-Xn7GvimQrk8-unsplash.jpg",
     price: 35,
     description: "Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fugit natus perferendis consectetur blanditiis accusantium. Quos reiciendis nobis ullam aliquam. dolor sit amet consectetur adipisicing elit. Aperiam eaque architecto nemo ex tenetur adipisci saepe, ratione aspernatur laudantium maiores.",
   },
@@ -402,6 +401,6 @@ const SHOP_DATA = [
     price: 41,
     description: "Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fugit natus perferendis consectetur blanditiis accusantium. Quos reiciendis nobis ullam aliquam. dolor sit amet consectetur adipisicing elit. Aperiam eaque architecto nemo ex tenetur adipisci saepe, ratione aspernatur laudantium maiores.",
   },
-]; 
+];
 
 export default SHOP_DATA;

@@ -5,12 +5,14 @@
   align-items: center;
   justify-content: center;
 }
+
 @media screen and (max-width: 800px) {
   .listItem {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 }
+
 @media screen and (max-width: 600px) {
   .listItem {
     grid-template-columns: 1fr;

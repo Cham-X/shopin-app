@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+.logo {
+  height: 40px;
+  width: 110px;
+}
+
 .formElement {
   display: flex;
   flex-direction: column;
@@ -21,4 +26,11 @@
 
 .button {
   padding: 0.3rem 0.5rem;
+}
+
+.signupOption {
+  display: flex;
+  white-space: nowrap;
+  gap: 0.5rem;
+  font-weight: 500;
 }

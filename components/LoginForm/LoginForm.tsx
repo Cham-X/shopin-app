@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Image from "next/image";
 import Link from "next/link";
 import React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
@@ -34,25 +35,26 @@ const LoginForm = () => {
     console.log('hello')
   }
   return (
-    < div className={styles.formSection}>
+    < div className={ styles.formSection }>
+      <Image src="/images/Shopin.png" alt="logo" className={ styles.logo } width="1000" height="1000" />
       <h3>Input your details</h3>
-      <FormProvider {...methods}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className={styles.formElement}>
+      <FormProvider { ...methods }>
+        <form onSubmit={ handleSubmit(onSubmit) }>
+          <div className={ styles.formElement }>
             <label htmlFor="email">Email</label>
-            <input type="email" {...register("email", { required: "Email is required" })} />
+            <input type="email" { ...register("email", { required: "Email is required" }) } />
           </div>
-          <div className={styles.formElement}>
+          <div className={ styles.formElement }>
             <label htmlFor="password">Password</label>
-            <input type="password" {...register("password", { required: "Password is required" })} />
-            {errors.password && (
-              <p className={styles.errorMessage}>{errors.password.message}</p>
-            )}
+            <input type="password" { ...register("password", { required: "Password is required" }) } />
+            { errors.password && (
+              <p className={ styles.errorMessage }>{ errors.password.message }</p>
+            ) }
           </div>
           <div>
-            <button type='submit' className={styles.button}>login</button>
+            <button type='submit' className={ styles.button }>login</button>
           </div>
-          <div className={styles.signupOption}>
+          <div className={ styles.signupOption }>
             <p>Don't have an account?</p><Link href="/signup">sign up</Link>
           </div>
         </form>

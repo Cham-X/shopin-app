@@ -76,7 +76,8 @@ a {
   transition: var(--transition);
 }
 
-a:hover {
+a:hover,
+a:active {
   color: var(--clr-lilac);
 }
 

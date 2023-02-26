@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useReducer, useState } from "react";
 import SHOP_DATA from "../data/shoppingData";
 import categories from "../data/categoriesData";
-import reducer from "../Reducer/Reducer";
+import reducer, { State } from "../Reducer/Reducer";
 import { onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../config/firebase";
 
@@ -13,14 +13,14 @@ export let shopItems = [];
 SHOP_DATA.forEach((item) => {
   shopItems.push(item);
 });
-const initaialState = {
+const initialState = {
   shopItems,
   cartItems: [],
 };
 
 export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [state, dispatch] = useReducer(reducer, initaialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
   const [user, setUser] = useState({ email: null, uid: null });
   const [loading, setLoading] = useState(true);
 
@@ -54,6 +54,18 @@ export const AppProvider = ({ children }) => {
     await signOut(auth);
   };
 
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem("state"))) {
+      dispatch({ type: "INIT_STORE", initialState: JSON.parse(localStorage.getItem("state")) });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (state !== initialState) {
+      localStorage.setItem("state", JSON.stringify(state));
+    };
+  }, [state]);
+
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
   };
@@ -76,6 +88,7 @@ export const AppProvider = ({ children }) => {
 
   const openSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+    console.log(state);
   };
 
   const closeSidebar = () => {
@@ -85,7 +98,7 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{
+      value={ {
         ...state,
         user,
         signUp,
@@ -102,8 +115,8 @@ export const AppProvider = ({ children }) => {
         categories,
         SHOP_DATA,
 
-      }}>
-      {children}
+      } }>
+      { children }
     </AppContext.Provider>
   );
 };

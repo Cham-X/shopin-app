@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import Image from 'next/image';
+import Link from "next/link";
 import {
   FormProvider,
   useForm
@@ -38,28 +40,32 @@ const SignupForm = () => {
   };
 
   return (
-    < div className={styles.formSection}>
+    < div className={ styles.formSection }>
+      <Image src="/images/Shopin.png" alt="logo" className={ styles.logo } width="1000" height="1000" />
       <h3>Signup with us</h3>
-      <FormProvider {...methods}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className={styles.formElement}>
+      <FormProvider { ...methods }>
+        <form onSubmit={ handleSubmit(onSubmit) }>
+          <div className={ styles.formElement }>
             <label htmlFor="email">Email</label>
-            <input type="email" {...register("email", { required: "Email is required" })} />
+            <input type="email" { ...register("email", { required: "Email is required" }) } />
           </div>
-          <div className={styles.formElement}>
+          <div className={ styles.formElement }>
             <label htmlFor="password">Password</label>
-            <input type="password" {...register("password", { required: "Password is required" })} />
+            <input type="password" { ...register("password", { required: "Password is required" }) } />
           </div>
-          <div className={styles.formElement}>
+          <div className={ styles.formElement }>
             <label htmlFor="password_confirm">Comfirm Password</label>
-            <input type="password" {...register("password_confirm", { required: "Verify Your Password" })} />
-            {errors.password_confirm && (
-              <p className={styles.errorMessage}>{errors.password_confirm.message}</p>
-            )}
+            <input type="password" { ...register("password_confirm", { required: "Verify Your Password" }) } />
+            { errors.password_confirm && (
+              <p className={ styles.errorMessage }>{ errors.password_confirm.message }</p>
+            ) }
           </div>
           <div>
-            <button type='submit' className={styles.button
+            <button type='submit' className={ styles.button
             }>Signup</button>
+          </div>
+          <div className={ styles.signupOption }>
+            <p>Already have an account?</p><Link href="/login">Login</Link>
           </div>
         </form>
       </FormProvider>

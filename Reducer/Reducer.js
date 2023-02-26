@@ -1,9 +1,19 @@
+import SHOP_DATA from "../data/shoppingData";
+export let shopItems = [];
+SHOP_DATA.forEach((item) => {
+  shopItems.push(item);
+});
+const State = {
+  shopItems,
+  cartItems: [],
+};
+
 const reducer = (state, action) => {
-  // if(action.type === "init_stored"){
-  //   return{
-      
-  //   }
-  // }
+  if (action.type === "INIT_STORE") {
+    return {
+      ...state,
+    };
+  }
   if (action.type === "CLEAR_CART") {
     return {
       ...state,
@@ -67,5 +77,5 @@ const reducer = (state, action) => {
   }
 };
 
- 
+
 export default reducer;

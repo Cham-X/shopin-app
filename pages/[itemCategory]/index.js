@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import ItemList from "../../components/ItemList/ItemList";
+import categories from "../../data/categoriesData";
 import SHOP_DATA from "../../data/shoppingData";
 
 const getProductByCategory = (category) => {
@@ -7,13 +8,20 @@ const getProductByCategory = (category) => {
   return product;
 };
 
+const getAvailableCategory = (category) => {
+  const categories = SHOP_DATA.map((product) => product.category === category);
+  return categories;
+};
+console.log(getAvailableCategory());
+
 const ItemCategory = (props) => {
   const router = useRouter();
   return (
     <>
+      <nav>{ getAvailableCategory() }</nav>
       <section>
-        <h2>Result for {router.query.itemCategory} items</h2>
-        <ItemList data={props.categoryData} />
+        <h2>Result for { router.query.itemCategory } items</h2>
+        <ItemList data={ props.categoryData } />
       </section>
     </>
   );
