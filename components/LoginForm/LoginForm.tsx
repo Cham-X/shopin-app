@@ -55,7 +55,7 @@ const LoginForm = () => {
             <button type='submit' className={ styles.button }>login</button>
           </div>
           <div className={ styles.signupOption }>
-            <p>Don't have an account?</p><Link href="/signup">sign up</Link>
+            <p>Don&apos;t have an account?</p><Link href="/signup">sign up</Link>
           </div>
         </form>
       </FormProvider>
